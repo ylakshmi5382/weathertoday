@@ -11,6 +11,23 @@ server:
   forward-headers-strategy : framework
 
 spring:
+  application: weatherToday
+  datasource:
+    url: jdbc:h2:mem:liquidbaseDB
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+     show-sql: false
+     database-platform: org.hibernate.dialect.H2Dialect
+     ddl-auto: none
+  liquibase:
+    enabled: true
+    change-log: classpath:db/db.changelog-master.xml
+  h2:
+   console:
+     enabled: true
   profiles:
     active: ${PROFILE:local,dev}
 
