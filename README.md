@@ -31,3 +31,13 @@ FETCH LIST OF CITIES IN A COUNTRY:
 curl -v --request GET  http://localhost:8299/weatherapi/countryId/cities
 
 ```
+### HOW TO BUILD DOCKER IMAGE AND DOCKER CONTAINER
+```
+
+docker login: 
+
+BUILD: 
+docker build -t weathertoday .
+RUN:
+docker run -p 8080:8080 -e "JAVA_OPTS=-Ddebug -Xmx128m" myorg/myapp
+```
