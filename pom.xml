@@ -155,7 +155,7 @@
 							<goal>push</goal>
 						</goals>
 						<configuration>
-							<tag>latest</tag>
+							<tag>lakshmi5382/jensensweatherapp:latest</tag>
 						</configuration>
 					</execution>
 					<execution>
@@ -166,14 +166,14 @@
 							<goal>push</goal>
 						</goals>
 						<configuration>
-							<tag>${project.version}</tag>
+							<tag>lakshmi5382/jensensweatherapp:${project.version}</tag>
 						</configuration>
 					</execution>
 				</executions>
 				<configuration>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 					<repository>https://hub.docker.com/r/lakshmi5382/jensensweatherapp</repository>
-					<tag>${project.version}</tag>
+					<tag>lakshmi5382/jensensweatherapp:${project.version}</tag>
 					<buildArgs>
 						<JAR_FILE>target/app.jar</JAR_FILE>
 					</buildArgs>
